@@ -37,18 +37,9 @@ https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repositor
 
 ---
 
-## 🔧 Configuration
-
-Personal login credentials e.g.
-- `username`: Digimeto email (replace with your own login credentials)
-- `password`: Password (replace with your own login credentials)
-- `mqtt_host`: e.g. `core-mosquitto` (replace with your own login credentials)
-
----
-
 ## 📝 Changelog
 
-### **1.0.0 — 02/05/2026**
+### **1.0.0 — 6/05/2026**
 - Initial release
 - Playwright login integrated
 - MQTT Auto-Discovery support
