@@ -39,7 +39,7 @@ https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repositor
 
 ## 📝 Changelog
 
-### **1.0.0 — 6/05/2026**
+### **1.0.0 — 6/02/2026**
 - Initial release
 - Playwright login integrated
 - MQTT Auto-Discovery support
