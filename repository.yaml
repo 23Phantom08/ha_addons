@@ -2,17 +2,3 @@ name: "23Phantom08 Home Assistant Add-ons"
 url: "https://github.com/23Phantom08/ha_addons"
 maintainer: "23Phantom08 <github.com/23Phantom08>"
 description: "MQTT Bridges & Automation Add-ons for Digimeto and Minol Customer Portals."
-arch:
-  - aarch64
-  - amd64
-addons:
-  digimeto_customer_portal:
-    name: "Digimeto Customer Portal MQTT Bridge"
-    description: "Automated Digimeto portal scraper with MQTT integration and HA Auto-Discovery."
-    slug: "digimeto_customer_portal"
-    stage: experimental
-  minol_customer_portal:
-    name: "Minol Customer Portal MQTT Bridge"
-    description: "Automated Minol portal scraper with MQTT integration and HA Auto-Discovery."
-    slug: "minol_customer_portal"
-    stage: experimental
