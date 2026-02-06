@@ -50,6 +50,13 @@ https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repositor
 - Playwright login integrated
 - MQTT Auto-Discovery support
 
+**Login fails?**
+- Check email/password
+- Automatic retry after 1-2 min
+
+**Playwright Error?**
+- At least 512 MB RAM required
+
 ---
 
 ## 📄 License
