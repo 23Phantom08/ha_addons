@@ -5,7 +5,6 @@ description: "MQTT Bridges & Automation Add-ons for Digimeto and Minol Customer 
 arch:
   - aarch64
   - amd64
-  - armv7
 addons:
   digimeto_customer_portal:
     name: "Digimeto Customer Portal MQTT Bridge"
