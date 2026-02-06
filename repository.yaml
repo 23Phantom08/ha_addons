@@ -1,0 +1,4 @@
+name: "Home Assistant Add-on Repo"
+url: "https://github.com/23Phantom08/ha_addons"
+maintainer: "23Phantom08"
+description: "Add-ons for Home Assistant and MQTT Integration"
