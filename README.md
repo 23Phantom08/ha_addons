@@ -32,8 +32,14 @@ https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repositor
 
 ## 📊 Automatically Created Sensors
 
+**Digimeto**
 - Current year consumption (kWh)
 - Consumption history (7-day / 13-month / 3-year)
+
+**Minol**
+- Heating Total (kWh)
+- Hot Water Total (m³)
+- Cold Water Total (m³)
 
 ---
 
