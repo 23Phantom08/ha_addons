@@ -328,7 +328,7 @@ class MQTTPublisher:
             
             for k, info in metrics.items():
                 t = "meter" if k in ["maloId", "metpoint", "mq"] else "consumption"
-                c = {"name": info[0], "object_id": f"digimeto_{k}", "unique_id": f"dg_{k}", "state_topic": f"{self.topic_prefix}/{t}/{k}", "device": dev}
+                c = {"name": info[0], "default_entity_id": f"sensor.digimeto_{k}", "unique_id": f"dg_{k}", "state_topic": f"{self.topic_prefix}/{t}/{k}", "device": dev}
                 if info[1]: c["unit_of_measurement"] = info[1]
                 if info[2]: c["device_class"] = info[2]
                 if info[3]: c["state_class"] = info[3]
@@ -336,12 +336,12 @@ class MQTTPublisher:
 
             for i in range(1, 8):
                 d_t = now - timedelta(days=i)
-                c = {"name": f"Verbrauch {wt[d_t.weekday()]} ({d_t.strftime('%d.%m.')})", "object_id": f"digimeto_day_{i}", "unique_id": f"dg_day_{i}", "state_topic": f"{self.topic_prefix}/history/days/day_{i}", "unit_of_measurement": "kWh", "device_class": "energy", "state_class": "measurement", "device": dev}
+                c = {"name": f"Verbrauch {wt[d_t.weekday()]} ({d_t.strftime('%d.%m.')})", "default_entity_id": f"sensor.digimeto_day_{i}", "unique_id": f"dg_day_{i}", "state_topic": f"{self.topic_prefix}/history/days/day_{i}", "unit_of_measurement": "kWh", "device_class": "energy", "state_class": "total", "device": dev}
                 self.client.publish(f"homeassistant/sensor/digimeto/day_{i}/config", json.dumps(c), retain=True)
 
             for i in range(1, 14):
                 m_t = now.replace(day=1) - timedelta(days=i*30)
-                c = {"name": f"Verbrauch {mn[m_t.month-1]} {m_t.year}", "object_id": f"digimeto_mon_{i}", "unique_id": f"dg_mon_{i}", "state_topic": f"{self.topic_prefix}/history/months/month_{i}", "unit_of_measurement": "kWh", "device_class": "energy", "state_class": "measurement", "device": dev}
+                c = {"name": f"Verbrauch {mn[m_t.month-1]} {m_t.year}", "default_entity_id": f"sensor.digimeto_mon_{i}", "unique_id": f"dg_mon_{i}", "state_topic": f"{self.topic_prefix}/history/months/month_{i}", "unit_of_measurement": "kWh", "device_class": "energy", "state_class": "total", "device": dev}
                 self.client.publish(f"homeassistant/sensor/digimeto/mon_{i}/config", json.dumps(c), retain=True)
             
             # Letzte 3 Jahre - FESTE Entitäten mit dynamischen Namen aus den Daten
@@ -357,7 +357,7 @@ class MQTTPublisher:
                     year_str = f'Jahr -{year_num-1}'
                 
                 # Jahr 1 = aktuelles/letztes, Jahr 2 = vorletztes, etc.
-                c = {"name": f"Verbrauch Jahr {year_str}", "object_id": f"digimeto_year_{year_num}", "unique_id": f"dg_year_{year_num}", "state_topic": f"{self.topic_prefix}/history/years/{year_key}", "unit_of_measurement": "kWh", "device_class": "energy", "state_class": "total_increasing", "device": dev}
+                c = {"name": f"Verbrauch Jahr {year_str}", "default_entity_id": f"sensor.digimeto_year_{year_num}", "unique_id": f"dg_year_{year_num}", "state_topic": f"{self.topic_prefix}/history/years/{year_key}", "unit_of_measurement": "kWh", "device_class": "energy", "state_class": "total_increasing", "device": dev}
                 self.client.publish(f"homeassistant/sensor/digimeto/year_{year_num}/config", json.dumps(c), retain=True)
         except Exception as e: logger.error(f"Discovery Fehler: {e}")
 
@@ -387,4 +387,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+                                        
