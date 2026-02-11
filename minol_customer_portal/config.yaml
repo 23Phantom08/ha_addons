@@ -1,5 +1,6 @@
 name: "Minol Customer Portal"
 description: "Fetches Minol consumption data via Playwright and sends it to MQTT."
+url: "https://github.com/23Phantom08/ha_addons/tree/main/minol_customer_portal"
 version: "1.1.0"
 slug: "minol_mqtt"
 init: false
