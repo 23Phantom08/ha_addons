@@ -20,6 +20,7 @@ https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repositor
 
 ## ✨ Main Features
 
+### ⚡ Digimeto
 - 🤖 **Fully automatic login** via Playwright — no manual cookie export!
 - 💾 **Persistent session** – Cookies are saved & reused.
 - 🔄 **Automatic re-login** on session timeout.
@@ -27,6 +28,16 @@ https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repositor
 - 🏠 **Home Assistant MQTT Auto-Discovery** integrated.
 - 📈 **7-day, 13-month & 3-year history** for optimal Energy Dashboard usage.
 - 🧮 **Current year consumption** updated daily
+
+### 💧 Minol
+
+- ✅ Automatic login (Playwright)
+- ✅ Heating, hot water, cold water per room
+- ✅ **Current & Last billing period sensors**
+- ✅ **Automatic hot water correction factor (58.15)**
+- ✅ **Zero-value filtering** (only active sensors shown)
+- ✅ MQTT Auto-Discovery
+- ✅ Customer information sensor
 
 ---
 
