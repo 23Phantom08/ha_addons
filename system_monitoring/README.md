@@ -43,7 +43,3 @@ homeassistant/sensor/system_monitor/temperature
 - **MQTT not publishing?** Check broker is running
 - **Stats missing?** Verify MQTT credentials
 - **Disk usage 0%?** Check Docker volume permissions
-
----
-
-**Version**: 1.0.0 | Made with ❤️ for Home Assistant
