@@ -1,5 +1,6 @@
 name: "Home Assistant System Monitoring"
 version: "1.0.0"
+url: "https://github.com/23Phantom08/ha_addons/tree/main/system_monitoring"
 slug: "ha_system_monitoring"
 description: "System Monitoring via MQTT (Background Service)"
 arch:
