@@ -1,0 +1,37 @@
+name: "Home Assistant System Monitoring"
+version: "1.0.0"
+slug: "ha_system_monitoring"
+description: "System Monitoring via MQTT (Background Service)"
+arch:
+  - amd64
+  - aarch64
+  - armv7
+startup: services
+boot: auto
+init: false
+s6_stage_one: true
+ingress: false
+host_network: true
+hassio_api: true
+homeassistant_api: true
+hassio_role: manager
+privileged:
+  - SYS_ADMIN
+  - SYS_RAWIO
+options:
+  mqtt_broker: "homeassistant"
+  mqtt_port: 1883
+  mqtt_user: ""
+  mqtt_password: ""
+  mqtt_topic_prefix: "homeassistant/sensor/system_monitor"
+  update_interval: 5
+  enable_mqtt: true
+schema:
+  mqtt_broker: str
+  mqtt_port: int
+  mqtt_user: str?
+  mqtt_password: str?
+  mqtt_topic_prefix: str
+  update_interval: int
+  enable_mqtt: bool
+
