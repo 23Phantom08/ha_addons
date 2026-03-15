@@ -1,5 +1,14 @@
 # Changelog - Digimeto Customer Portal
 
+## [1.2.0] - 2026-03-15
+
+### 🐛 Bug Fixes
+- Fixed month sensor names showing wrong labels (e.g. double "Dezember", "Januar" instead of "Februar")
+  - Root cause: `timedelta(days=i*30)` drifted incorrectly across short months like February
+  - Replaced with reliable modulo arithmetic directly on month/year values
+
+---
+
 ## [1.1.0] - 2026-02-10
 
 ### 🔧 Improvements
