@@ -1,6 +1,6 @@
 {
   "name": "Digimeto Customer Portal",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "slug": "digimeto-mqtt",
   "description": "Retrieves electricity data from Digimeto and publishes it via MQTT (Playwright Auto-Login)",
   "url": "https://github.com/23Phantom08/ha_addons/tree/main/digimeto_customer_portal",
